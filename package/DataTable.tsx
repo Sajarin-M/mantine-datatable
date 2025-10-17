@@ -76,6 +76,7 @@ export function DataTable<T>({
     }
     return {};
   },
+  getPaginationItemProps = (page) => ({ 'aria-label': `Page ${page}` }),
   loaderBackgroundBlur,
   customLoader,
   loaderSize,
@@ -417,6 +418,7 @@ export function DataTable<T>({
             paginationText={paginationText}
             paginationWrapBreakpoint={paginationWrapBreakpoint}
             getPaginationControlProps={getPaginationControlProps}
+            getPaginationItemProps={getPaginationItemProps}
             noRecordsText={noRecordsText}
             loadingText={loadingText}
             recordsLength={recordsLength}

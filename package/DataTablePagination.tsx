@@ -9,7 +9,12 @@ import type { WithOptionalProperty, WithRequiredProperty } from './types/utils';
 type DataTablePaginationComponentProps = WithOptionalProperty<
   WithRequiredProperty<
     DataTablePaginationProps,
-    'loadingText' | 'paginationSize' | 'recordsPerPageLabel' | 'paginationWrapBreakpoint' | 'getPaginationControlProps'
+    | 'loadingText'
+    | 'paginationSize'
+    | 'recordsPerPageLabel'
+    | 'paginationWrapBreakpoint'
+    | 'getPaginationControlProps'
+    | 'getPaginationItemProps'
   >,
   'onRecordsPerPageChange' | 'recordsPerPageOptions'
 > & {
@@ -44,6 +49,7 @@ export function DataTablePagination({
   horizontalSpacing,
   paginationWrapBreakpoint,
   getPaginationControlProps,
+  getPaginationItemProps,
 }: DataTablePaginationComponentProps) {
   let paginationTextValue: React.ReactNode;
   if (totalRecords) {
@@ -104,6 +110,7 @@ export function DataTablePagination({
         size={paginationSize}
         total={Math.ceil(totalRecords! / recordsPerPage!)}
         getControlProps={getPaginationControlProps}
+        getItemProps={getPaginationItemProps}
       />
     </Box>
   );

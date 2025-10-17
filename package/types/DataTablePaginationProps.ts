@@ -16,6 +16,7 @@ export type DataTablePaginationProps = (
       paginationText?: never;
       paginationWrapBreakpoint?: never;
       getPaginationControlProps?: never;
+      getPaginationItemProps?: never;
     }
   | {
       /**
@@ -96,6 +97,12 @@ export type DataTablePaginationProps = (
        * Useful for improving accessibility.
        */
       getPaginationControlProps?: (control: 'first' | 'last' | 'previous' | 'next') => Record<string, unknown>;
+
+      /**
+       * Function that returns props object for pagination item (page number button).
+       * Useful for improving accessibility.
+       */
+      getPaginationItemProps?: (page: number) => Record<string, unknown>;
     }
 ) &
   DataTablePageSizeSelectorProps;
