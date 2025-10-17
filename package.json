@@ -25,20 +25,15 @@
     "ux",
     "user experience"
   ],
-  "repository": "icflorescu/mantine-datatable",
-  "homepage": "https://icflorescu.github.io/mantine-datatable/",
+  "repository": "Sajarin-M/mantine-datatable",
   "bugs": {
-    "url": "https://github.com/icflorescu/mantine-datatable/issues"
+    "url": "https://github.com/Sajarin-M/mantine-datatable/issues"
   },
   "license": "MIT",
   "author": {
-    "name": "Ionut-Cristian Florescu",
-    "email": "ionut.florescu@gmail.com",
-    "url": "https://github.com/icflorescu"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/icflorescu"
+    "name": "Sajarin M",
+    "email": "sajarinm@gmail.com",
+    "url": "https://github.com/Sajarin-M"
   },
   "files": [
     "./dist",
