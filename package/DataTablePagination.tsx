@@ -45,6 +45,7 @@ export const DataTablePagination = forwardRef(function DataTablePagination(
     horizontalSpacing,
     paginationWrapBreakpoint,
     getPaginationControlProps,
+    getPaginationItemProps,
   }: DataTablePaginationComponentProps,
   ref: ForwardedRef<HTMLDivElement>
 ) {
@@ -109,6 +110,7 @@ export const DataTablePagination = forwardRef(function DataTablePagination(
         size={paginationSize}
         total={Math.ceil(totalRecords! / recordsPerPage!)}
         getControlProps={getPaginationControlProps}
+        getItemProps={getPaginationItemProps}
       />
     </Box>
   );

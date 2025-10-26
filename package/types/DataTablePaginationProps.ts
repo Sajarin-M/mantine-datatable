@@ -15,6 +15,7 @@ export type DataTablePaginationProps = (
       paginationText?: never;
       paginationWrapBreakpoint?: never;
       getPaginationControlProps?: never;
+      getPaginationItemProps?: never;
     }
   | {
       /**
@@ -90,6 +91,12 @@ export type DataTablePaginationProps = (
        * Useful for improving accessibility.
        */
       getPaginationControlProps?: (control: 'first' | 'last' | 'previous' | 'next') => Record<string, unknown>;
+
+      /**
+       * Function that returns props for each pagination item (page number).
+       * Passed through to Mantine Pagination as `getItemProps`.
+       */
+      getPaginationItemProps?: (page: number) => Record<string, unknown>;
     }
 ) &
   DataTablePageSizeSelectorProps;
