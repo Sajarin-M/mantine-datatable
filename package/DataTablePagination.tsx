@@ -11,7 +11,7 @@ type DataTablePaginationComponentProps = WithOptionalProperty<
     DataTablePaginationProps,
     'loadingText' | 'paginationSize' | 'recordsPerPageLabel' | 'paginationWrapBreakpoint' | 'getPaginationControlProps'
   >,
-  'onRecordsPerPageChange' | 'recordsPerPageOptions'
+  'onRecordsPerPageChange' | 'recordsPerPageOptions' | 'getPaginationItemProps'
 > & {
   className: string | undefined;
   style: MantineStyleProp | undefined;
@@ -44,6 +44,7 @@ export function DataTablePagination({
   horizontalSpacing,
   paginationWrapBreakpoint,
   getPaginationControlProps,
+  getPaginationItemProps,
 }: DataTablePaginationComponentProps) {
   let paginationTextValue: React.ReactNode;
   if (totalRecords) {
@@ -104,6 +105,7 @@ export function DataTablePagination({
         size={paginationSize}
         total={Math.ceil(totalRecords! / recordsPerPage!)}
         getControlProps={getPaginationControlProps}
+        getItemProps={getPaginationItemProps}
       />
     </Box>
   );
