@@ -9,14 +9,9 @@ import type { WithOptionalProperty, WithRequiredProperty } from './types/utils';
 type DataTablePaginationComponentProps = WithOptionalProperty<
   WithRequiredProperty<
     DataTablePaginationProps,
-    | 'loadingText'
-    | 'paginationSize'
-    | 'recordsPerPageLabel'
-    | 'paginationWrapBreakpoint'
-    | 'getPaginationControlProps'
-    | 'getPaginationItemProps'
+    'loadingText' | 'paginationSize' | 'recordsPerPageLabel' | 'paginationWrapBreakpoint' | 'getPaginationControlProps'
   >,
-  'onRecordsPerPageChange' | 'recordsPerPageOptions'
+  'onRecordsPerPageChange' | 'recordsPerPageOptions' | 'getPaginationItemProps'
 > & {
   className: string | undefined;
   style: MantineStyleProp | undefined;
