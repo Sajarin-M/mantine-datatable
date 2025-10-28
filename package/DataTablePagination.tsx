@@ -11,7 +11,7 @@ type DataTablePaginationComponentProps = WithOptionalProperty<
     DataTablePaginationProps,
     'loadingText' | 'paginationSize' | 'recordsPerPageLabel' | 'paginationWrapBreakpoint' | 'getPaginationControlProps'
   >,
-  'onRecordsPerPageChange' | 'recordsPerPageOptions' | 'getPaginationItemProps'
+  'onRecordsPerPageChange' | 'recordsPerPageOptions'
 > & {
   className: string | undefined;
   style: MantineStyleProp | undefined;
